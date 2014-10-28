@@ -7,6 +7,7 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem 'letter_opener', group: :development
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
