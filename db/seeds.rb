@@ -21,5 +21,5 @@ growth_hacking = Product.create(
  <li>The 5 stages of the user lifecycle</li>
  <li>How to apply the Lean Marketing Framework</li>
  <li>Resources and tools you'll need to know</li>
- </ul>}
+ </ul>})
  
