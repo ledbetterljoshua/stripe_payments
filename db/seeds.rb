@@ -10,7 +10,6 @@ growth_hacking = Product.create(
 	title: "Growth Hacking", 
  	subtitle: "Crash Course", 
  	author: "Mattan Griffel", 
- 	length: "30 minutes", 
  	author_image_name: "teacher-image.jpg", 
  	price: "4.99", 
  	sku: "GROHACK1", 
