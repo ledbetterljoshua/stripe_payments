@@ -17,18 +17,18 @@
         <div id="price-container">
           <span class="glyphicon glyphicon-tag"></span><span class="price">$4.99</span>
         </div>
-         <%= image_tag('header-image.jpg', id: 'content-header-img', alt: 'Learn Growth Hacking') %>
+<%= yield :head %>
     </header>
-<div class="left-nav">
-<div class="account-info">
-  <div class="user-img"></div>
-  <div class="user-name"></div>
-</div>
-</div>
-<div class="right-nav">
-  <div class="discover">
-  </div>
-</div>
+      <div class="left-nav">
+        <div class="account-info">
+          <div class="user-img"></div>
+          <div class="user-name"></div>
+        </div>
+      </div>
+      <div class="right-nav">
+        <div class="discover">
+        </div>
+    </div>
 <%= yield %>
 
 
