@@ -7,7 +7,6 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
-gem 'letter_opener', group: :development
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -18,6 +17,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem "figaro"
+gem 'letter_opener', group: :development
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
