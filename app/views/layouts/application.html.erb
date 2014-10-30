@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>StripePayments</title>
+  <title>Hand + Word</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -11,6 +11,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <% flash.each do |name, msg| %>
+     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+  <% end %>
 
 <div id="content" class="container">
     <header id="content-header">
