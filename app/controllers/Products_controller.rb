@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 	before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
    def index 
    	@products = Product.all
@@ -9,7 +11,7 @@ class ProductsController < ApplicationController
    end
    # GET /products/new
   def new
-    @product = Product.new
+   @product = current_user.products.build
   end
 
   # GET /products/1/edit
@@ -19,7 +21,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
+    @product = current_user.products.new(product_params)
+
     if @product.save
       redirect_to @product, notice: 'product was successfully created.'
     else

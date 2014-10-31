@@ -13,10 +13,7 @@
   <% end %>
 
 
-        <div id="price-container">
-          <span class="glyphicon glyphicon-tag"></span><span class="price" style="color:black">
-          <%= f.text_field :price, id: "form-control", :placeholder => "price" %></span>
-        </div>
+
    <img src="https://unsplash.imgix.net/reserve/wVlfnlTbRtK8eGvbnBZI_VolkanOlmez_005.jpg?q=75&fm=jpg&s=de70d125f08a3fbb40d6b9984af5c3ad" id="content-header-img", alt="Check out our courses">
 
 
@@ -36,10 +33,11 @@
 
     <ul id="details-infobox" class="list-group">
               <li class="list-group-item active clearfix">DETAILS</li>
-              <li> <%= f.text_field :details, class: "list-group-item", :placeholder => "details" %></li>
+              <li style="list-style:none;"> <%= f.text_area :details, class: "list-group-item", :placeholder => "details" %></li>
               <li class="list-group-item clearfix">
-                <span class="pull-left content-qualifier">Length</span>
-                <span> <%= f.text_field :length, class: "pull-right", :placeholder => "length" %></span>
+                <span> <%= f.text_field :length, class: "pull-right", :placeholder => "length", class: "margin-side-yo" %></span>
+                <span> <%= f.text_field :price, id: "form-control", :placeholder => "price", class: "margin-side-yo" %></span>
+                <span> <%= f.text_field :sku, id: "form-control", :placeholder => "SKU" %></span>
               </li>
             </ul>
          </aside>

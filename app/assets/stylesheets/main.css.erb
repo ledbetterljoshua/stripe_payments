@@ -414,7 +414,13 @@ border: none;
 box-shadow: 1px 2px 6px 1px lightgrey;
 margin-top: 5px;
 }
-
+input, button, select, textarea {
+border: none;
+width: 100%;
+box-shadow: 0px 5px 9px 0px lightgrey;
+}
+input, button, select, textarea:active {border:none;}
+.margin-side-yo {margin-bottom: 10px;}
 
 
 /* RESPONSIVE */
@@ -480,6 +486,15 @@ margin-top: 5px;
  margin-left: 30px;
  max-width: calc(100% - 220px);
  }
+
+ button, html input[type="button"], input[type="reset"], input[type="submit"] {
+-webkit-appearance: button;
+width: 90%;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+display: block;
+}
 
  /* PRODUCT DETAIL */
 

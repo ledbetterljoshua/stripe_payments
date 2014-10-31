@@ -23,6 +23,10 @@
       <%= hidden_field_tag 'amount', @product.price_in_cents %>  
     <aside id="details-aside" class="col-sm-4">
       <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>I want this!</button>
+      <% if @product.user == current_user %>
+  <%= link_to 'Edit', edit_product_path(@product) %>
+  <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
     <aside>
     <script>
     var handler = StripeCheckout.configure({
