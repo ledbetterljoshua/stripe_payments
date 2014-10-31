@@ -1,9 +1,8 @@
 
 <% content_for :head do %>
         <div id="price-container">
-          <span class="glyphicon glyphicon-tag"></span><span class="price">$4.99</span>
+          <span class="glyphicon glyphicon-tag"></span><span class="price">$<%= @product.price %></span>
         </div>
-<!-- <%= image_tag(@product.header_image_name, id: 'content-header-img', alt: 'Check out our courses') %> -->
    <img src="https://unsplash.imgix.net/reserve/wVlfnlTbRtK8eGvbnBZI_VolkanOlmez_005.jpg?q=75&fm=jpg&s=de70d125f08a3fbb40d6b9984af5c3ad" id="content-header-img", alt="Check out our courses">
 <% end %>
 
@@ -12,7 +11,7 @@
             <h1 id="article-title"><%= @product.title %> <span class="font-weight-light"><%= @product.subtitle %></span></h1>
             <h3><small>By <a href="#" data-toggle="modal" data-target="#author-modal"><%= @product.author %></a></small></h3>
 
-            <%= raw @product.description %>
+            <%= raw @product.description_br %>
         </article>
 <!--         <aside id="details-aside" class="col-sm-4">
             <a id="btn-buy" href="receipt.html" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>I want this!</a> -->
@@ -36,8 +35,8 @@
     });
      document.getElementById('btn-buy').addEventListener('click', function(e) {
       handler.open({
-        name: 'One Month',
-        description: 'Growth Hacking Crash Course ($ <%= @product.price %>)',
+        name: 'Hand + Word',
+        description: '<%= @product.title %> ($ <%= @product.price %>)',
         amount: document.getElementById('amount').value
     });
     e.preventDefault();
@@ -46,7 +45,7 @@
 <% end %>
             <ul id="details-infobox" class="list-group">
               <li class="list-group-item active clearfix">DETAILS</li>
-              <li class="list-group-item">You'll get one video</li>
+              <li class="list-group-item"><%= @product.details %></li>
               <li class="list-group-item clearfix">
                 <span class="pull-left content-qualifier">Length</span>
                 <span class="pull-right"> <%= @product.length %> </span>

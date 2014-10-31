@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029235217) do
+ActiveRecord::Schema.define(version: 20141030043016) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -60,7 +60,10 @@ ActiveRecord::Schema.define(version: 20141029235217) do
     t.string   "author_image_name"
     t.string   "download_url"
     t.text     "details"
+    t.integer  "user_id"
   end
+
+  add_index "products", ["user_id"], name: "index_products_on_user_id"
 
   create_table "purchases", force: true do |t|
     t.string   "email"

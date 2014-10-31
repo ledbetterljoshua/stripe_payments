@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'pages#home'
   resources :charges
-  resources :products, only: [:index, :show]
+  resources :products
   resources :purchases, only: [:show]
 
   

@@ -27,7 +27,13 @@
         </div>
         <div class="user-info">
         <ul>
-          <li>account</li>
+          <%= link_to edit_user_registration_path do  %>
+           <li> Account Settings </li>
+            <% end %>
+        
+          <%= link_to new_product_path do %>
+            <li> Add Listing </li>
+          <% end %> 
           <li>reading list</li>
           <li>random</li>
           <li>stuff</li>
