@@ -4,12 +4,13 @@
           <span class="glyphicon glyphicon-tag"></span><span class="price">$<%= @product.price %></span>
         </div>
     <section name="7ee3">
-      <div class="section-background" data-scroll="aspect-ratio-viewport" contenteditable="false" data-width="900" data-height="600" style="background-image: url(https://unsplash.imgix.net/reserve/xpdPwXTASnOUXFpIPgDs_IMG_1460_edt.jpg?q=75&fm=jpg&s=14f08c0d844035df3c9fea8705d4c38c); background-size: 100%;">
+      <div class="section-background" data-scroll="aspect-ratio-viewport" contenteditable="false" data-width="900" data-height="600" style="background-image: url(<%=  @product.image.url %> ); background-size: 100%; background-repeat: no-repeat;">
             <div class="u-ignoreBlock" style="padding-bottom: 66.6667%;"></div>
           <div class="section-captionContent u-ignoreBlock">
         </div>
       </div>
-    </section>
+    </section> 
+
 <% end %>
     <section id="content-details" class="row clearfix">
         <article id="details-article" class="col-sm-8">

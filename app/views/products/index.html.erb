@@ -9,7 +9,7 @@
 	<div class="product clearfix">
 		<a href="<%=product_path(product) %>">
 			<div class="product-image-container">
-			<img src="#" alt="<%= product.title %>"/>
+			<%= image_tag product.image.url %>
 			<span class="product-price"><%= product.price %></span>
 		</div>
 		<p class="product-title"><%= product.title %></p></a>

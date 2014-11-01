@@ -1,21 +1,29 @@
 
   <%= form_for @product, html: { multipart: true } do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+    <% if @product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% @product.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-
-   <img src="https://unsplash.imgix.net/reserve/wVlfnlTbRtK8eGvbnBZI_VolkanOlmez_005.jpg?q=75&fm=jpg&s=de70d125f08a3fbb40d6b9984af5c3ad" id="content-header-img", alt="Check out our courses">
-
+        <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+<% if @product.id.present? %>
+   <section name="7ee3">
+      <div class="section-background" data-scroll="aspect-ratio-viewport" contenteditable="false" data-width="900" data-height="600" style="background-image: url( <%=  @product.image.url %> ); background-size: 100%; background-repeat:no-repeat;">
+            <div class="u-ignoreBlock" style="padding-bottom: 66.6667%;"></div>
+          <div class="section-captionContent u-ignoreBlock">
+        </div>
+      </div>
+    </section> 
+     <% end %>   
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
 
     <section id="content-details" class="row clearfix">
         <article id="details-article" class="col-sm-8">
@@ -33,7 +41,7 @@
 
     <ul id="details-infobox" class="list-group">
               <li class="list-group-item active clearfix">DETAILS</li>
-              <li style="list-style:none;"> <%= f.text_area :details, class: "list-group-item", :placeholder => "details" %></li>
+              <li style="list-style:none;height:244px;"> <%= f.text_area :details, class: "list-group-item", :placeholder => "details" %></li>
               <li class="list-group-item clearfix">
                 <span> <%= f.text_field :length, class: "pull-right", :placeholder => "length", class: "margin-side-yo" %></span>
                 <span> <%= f.text_field :price, id: "form-control", :placeholder => "price", class: "margin-side-yo" %></span>
@@ -42,7 +50,7 @@
             </ul>
          </aside>
     </section>
-        <% end %>
+  <% end %>
 
 
 

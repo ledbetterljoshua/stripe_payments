@@ -16,11 +16,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'paperclip', '~> 3.0'
-gem 'dragonfly'
-gem 'dragonfly-s3_data_store'
-	group :production do
-	  gem 'rack-cache', :require => 'rack/cache'
-	end
+gem 'aws-sdk', '~> 1.20.0'
+gem 'mime-types', '~> 1.16'
 gem 'remotipart', '~> 1.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem "figaro"
