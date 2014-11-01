@@ -426,6 +426,7 @@ input, button, select, textarea:active {border:none;}
     background: url('https://unsplash.imgix.net/reserve/wVlfnlTbRtK8eGvbnBZI_VolkanOlmez_005.jpg?q=75&fm=jpg&s=de70d125f08a3fbb40d6b9984af5c3ad" id="content-header-img');
     width: 100%;
     height: auto;
+    background-size: 100%;
 }
 
 
@@ -548,4 +549,101 @@ display: block;
  margin-bottom: 10px;
  }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.is-imageBackgrounded.is-darkBackgrounded.is-sectionUsingCanvas {
+background: rgba(255,255,255,0);
+}
+section.is-imageBackgrounded.is-darkBackgrounded {
+background: #191918;
+color: #fff;
+}
+.section--first.is-backgrounded {
+margin-top: 0;
+}
+section.section-image--aspectRatio, section.section-image--aspectRatioViewport {
+padding: 0;
+}
+section.is-imageBackgrounded {
+box-sizing: border-box;
+padding-bottom: 80px;
+}
+section.is-backgrounded {
+padding: 80px 0;
+width: 100%;
+margin: 80px 0;
+}
+.section-image--aspectRatioViewport.is-imageBackgrounded .section-background, .section-image--aspectRatioViewport.is-imageBackgrounded .section-backgroundImage {
+bottom: 0;
+}
+section.is-imageBackgrounded>.section-background {
+display: block;
+width: 100%;
+position: absolute;
+top: 0;
+cursor: default;
+}
+section.is-imageBackgrounded.is-darkBackgrounded {
+background: #191918;
+color: #fff;
+}
+section.is-imageBackgrounded .section-backgroundImage {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+background-size: cover;
+background-position: center;
+}
+.section-image--aspectRatioViewport .section-backgroundImage:before {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.44);
+}
+section.is-imageBackgrounded>.section-background {
+display: block;
+width: 100%;
+position: absolute;
+top: 0;
+cursor: default;
+}
+.section-doubleWidthTable {
+width: 200%;
+}
+.section-doubleWidthTable {
+width: 200%;
+}
+.u-table {
+display: table;
+}
+.section-captionContent, section.is-darkBackgrounded>.section-captionContent {
+position: absolute;
+top: 100%;
+width: 100%;
+display: block;
+color: rgba(0,0,0,0.6);
+left: 0;
+margin-top: 10px;
+}
+
+.parallax-background {
+    height: 700px;
 }
